@@ -14,7 +14,7 @@ RUN bundle install --system && \
 
 COPY . /devdocs
 
-RUN thor docs:download --all && \
+RUN thor docs:download Cpp C openjdk@8 python@3.5 && \
     thor assets:compile && \
     rm -rf /tmp
 
